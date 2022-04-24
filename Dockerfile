@@ -3,7 +3,7 @@ FROM nvidia/cuda:11.3.1-cudnn8-runtime
 RUN apt-get -f -y upgrade
 RUN apt-get clean
 RUN apt-get update --fix-missing
-RUN apt-get -f -y install \
+RUN DEBIAN_FRONTEND="noninteractive" apt-get -f -y install \
     tmux \
     build-essential \
     gcc g++ make \
