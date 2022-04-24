@@ -42,14 +42,14 @@ RUN conda install \
         pandas \
         seaborn \
         Pillow \
-        tqdm \
-	pydicom
+        tqdm
         
 RUN conda install pytorch torchvision cudatoolkit=10.2 -c pytorch
 
 # install tensorflow & keras
 RUN pip --no-cache-dir install --upgrade \
-        opencv-python-headless
+        opencv-python-headless && \
+	pip install --no-cache-dir install pydicom
 	
 #start ssh and terminal
 CMD /etc/init.d/ssh start ; /bin/bash
