@@ -1,4 +1,4 @@
-FROM nvidia/cuda:10.2-cudnn7-runtime
+FROM nvidia/cuda:11.3.1-cudnn8-runtime
 # ensure system is updated and has basic build tools
 RUN apt-get -f -y upgrade
 RUN apt-get clean
@@ -44,7 +44,7 @@ RUN conda install \
         Pillow \
         tqdm
         
-RUN conda install pytorch torchvision cudatoolkit=10.2 -c pytorch
+RUN conda install pytorch torchvision cudatoolkit=11.3 -c pytorch
 
 # install tensorflow & keras
 RUN pip --no-cache-dir install --upgrade \
