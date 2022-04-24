@@ -49,7 +49,7 @@ RUN conda install pytorch torchvision cudatoolkit=11.3 -c pytorch
 # install tensorflow & keras
 RUN pip --no-cache-dir install --upgrade \
         opencv-python-headless && \
-	pip install --no-cache-dir install pydicom
+    pip --no-cache-dir install pydicom
 	
 #start ssh and terminal
 CMD /etc/init.d/ssh start ; /bin/bash
