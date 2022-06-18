@@ -15,9 +15,9 @@ RUN DEBIAN_FRONTEND="noninteractive" apt-get -f -y install \
     unrar \
     openvpn \
     git \
-	ffmpeg \
-	openexr \
-	libgtk2.0-0 \
+    ffmpeg \
+    openexr \
+    libgtk2.0-0 \
     software-properties-common file locales uuid-runtime \
     wget bzip2 ca-certificates \
     libglib2.0-0 libxext6 libsm6 libxrender1 \
